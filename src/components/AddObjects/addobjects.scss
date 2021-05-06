@@ -1,0 +1,287 @@
+@use 'src/styles/vars';
+
+.addobjects-title {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-family: vars.$primary-font;
+  background-color: vars.$verylight-blue;
+  margin-bottom: 1rem;
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+  background-color: #ffe299;
+  border: 1px solid #ffc685;
+  text-shadow: 0px 1px 0px vars.$yellow;
+  margin-top: 1.8rem;
+}
+
+.form-container {
+  background-color: white;
+  border-radius: 15px;
+  font-family: vars.$secondary-font;
+  margin-bottom: 85px;
+  margin-top: 15px;
+  padding: 20px;
+
+  .add-tabslist {
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+
+    .react-tabs__tab--selected {
+      font-weight: bolder;
+      text-decoration: underline;
+
+    }
+  }
+}
+
+.label {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.add-image {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.add-submit {
+  background: linear-gradient(to bottom, vars.$light-blue 5%, vars.$blue 100%);
+  background-color: #79bbff;
+  border-radius: 28px;
+  border: 1px solid #84bbf3;
+  display: inline-block;
+  font-family: vars.$secondary-font;
+  font-size: 16px;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #aac5e0;
+  display: flex;
+  margin: 20px auto;
+}
+
+form {
+  .category {
+    margin-top: 20px;
+
+    .add-image {
+      vertical-align: middle;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: auto;
+
+      .image-label {
+        font-family: vars.$secondary-font;
+        font-size: 22px;
+      }
+
+      .custom-upload {
+        border-radius: 15px;
+        font-size: 14px;
+        color: #555;
+        padding: 7px 10px;
+        width: 100%;
+        outline: none;
+        box-shadow: none;
+        border: 1px solid vars.$light-blue;
+        background-color: #fff;
+        font-family: Arial;
+        text-align: center;
+
+        &:hover {
+          background: vars.$blue;
+          transition: 0.3s;
+        }
+      }
+
+      input[type="file"] {
+        position: absolute;
+        z-index: -1;
+        top: 6px;
+        left: 0px;
+        font-size: 14px;
+        color: rgb(153, 153, 153);
+        height: 30px;
+      }
+    }
+  }
+
+  .category-book {
+    border-radius: 15px;
+    background-image: url('https://images.unsplash.com/photo-1535058314881-56b6eb96bd69?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    padding: 5px 15px;
+  }
+
+  .category-cinema {
+    background-image: url('https://images.unsplash.com/photo-1606579335925-ea67bcbd09c7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    border-radius: 15px;
+    padding: 5px 15px;
+  }
+
+  .category-music {
+    background-image: url('https://images.unsplash.com/photo-1492284163710-4eef97892705?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 5px 15px;
+    color: whitesmoke;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  .addobjects-container {
+    width: 35%;
+  }
+
+  .add-tabslist {
+    margin-bottom: 15px;
+  }
+
+  .category {
+    margin-top: 30px;
+    margin: auto;
+  }
+
+  .category-book {
+    background-color: vars.$verylight-blue;
+    background-image: url('https://images.unsplash.com/photo-1535058314881-56b6eb96bd69?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  .category-cinema {
+    background-color: vars.$light-blue;
+    background-image: url('https://images.unsplash.com/photo-1606579335925-ea67bcbd09c7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    border-radius: 15px;
+  }
+
+  .category-music {
+    background-color: vars.$blue;
+    background-image: url('https://images.unsplash.com/photo-1492284163710-4eef97892705?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=634&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 5px 15px;
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  .addobjects-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  // Images source: 'https://unsplash.com/s/photos/books' - THANK YOU FOR SHARING <3
+
+
+  @media only screen and (min-width: 426px) {
+    .addobjects-container {
+      width: 100%;
+      margin: auto;
+    }
+
+    .form-container {
+      margin: auto;
+      margin-top: 30px;
+    }
+
+  }
+
+  @media only screen and (min-width: 550px) {
+
+    .addobjects-container {
+      width: 40vw;
+      margin: auto;
+    }
+  }
+
+  .form-container {
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .category {
+    width: 85%;
+  }
+
+
+}
+
+// @media only screen and (min-width: 740px) {
+
+//   .addobjects-container {
+//     width: 80%;
+//     margin: auto;
+//   }
+
+//   .form-container {
+//     margin: auto;
+//     margin-top: 30px;
+//   }
+
+//   .category {
+//     width: 85%;
+//   }
+
+
+// }
+
+@media only screen and (min-width: 769px) {
+  .addobjects-container {
+    padding: 5px;
+  }
+}
+
+// @media only screen and (min-width: 1025px) {
+
+//   .addobjects-container {
+//     width: 40%;
+//     margin: auto;
+//   }
+
+//   .form-container {
+//     margin: auto;
+//     margin-top: 30px;
+//   }
+
+//   .category {
+//     width: 85%;
+//   }
+
+
+// }
+
+@media only screen and (min-width: 1450px) {
+
+  .addobjects-container {
+    width: 40vw;
+    margin: auto;
+  }
+
+  .form-container {
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .category {
+    width: 90%;
+  }
+
+}

@@ -1,0 +1,97 @@
+@use 'src/styles/vars';
+
+.contact-title{
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-family: vars.$primary-font;
+  background-color: vars.$verylight-blue;
+  margin-bottom: 1rem;
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 700;
+  background:linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+  background-color:#ffe299;
+  border:1px solid #ffc685;
+  text-shadow:0px 1px 0px vars.$yellow;
+  margin-top: 1.8rem;
+}
+
+.chatList {
+  margin-top: 2rem;
+  padding: 2em;
+  width: 90vw;
+  height: 60vh;
+  position: relative;
+  background-color: vars.$verylight-blue;
+  border-radius: 15px;
+
+    .closeChat {
+      position: fixed;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      right: 5vw;
+      margin-top: -13vh;
+      z-index: 2;
+    }
+
+
+  .content {
+    display: none;
+  }
+}
+
+
+@media only screen and (min-width: 426px) {
+
+  .chat-desktop {
+    width: 90%;
+    margin: auto;
+  }
+
+  .chatList {
+    width: 100%;
+  }
+
+
+}
+
+@media only screen and (min-width: 769px) {
+
+  .chat-desktop {
+    width: 65%;
+    margin: auto;
+  }
+
+  .chatList {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 1025px) {
+
+  .chat-desktop {
+    width: 55%;
+    margin: auto;
+  }
+
+  .chatList {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 1500px) {
+
+  .chat-desktop {
+    width: 35%;
+    margin: auto;
+  }
+
+  .chatList {
+    width: 100%;
+  }
+
+}

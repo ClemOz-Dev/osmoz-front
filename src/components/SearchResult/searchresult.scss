@@ -1,0 +1,44 @@
+@use 'src/styles/vars';
+
+.search-result {
+  width: 90vw;
+  margin: auto;
+  text-align: start;
+  overflow-y: auto;
+
+  .text-container {
+    margin: 30px 0;
+
+    .text {
+      font-family: vars.$primary-font;
+      font-size: 18px;
+    }
+  }
+
+  .label {
+    margin-top: 0.5rem;
+    position: sticky;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-family: vars.$secondary-font;
+    width: fit-content;
+    background: linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+    background-color: #ffe299;
+    border-radius: 28px;
+    border: 1px solid #ffc685;
+    display: inline-block;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px vars.$yellow;
+    margin: auto;
+  }
+
+  .list {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 490px; 
+    margin-top: 2rem;  
+  }
+}

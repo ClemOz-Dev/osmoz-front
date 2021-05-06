@@ -1,0 +1,44 @@
+@use 'src/styles/vars';
+
+.others-container{
+  display: flex;
+  flex-direction: column;
+  font-family: vars.$secondary-font;
+  margin-top: 25px;
+  text-align: center;
+
+  .links-others{
+    background-color: vars.$verylight-blue;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 426px) {
+  .others-container {
+    max-width: 80%;
+    margin: 25px auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .others-container {
+    max-width: 70%;
+    margin: 25px auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .others-container {
+    max-width: 60%;
+    margin: 25px auto;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .others-container {
+    display: none;
+  }
+}

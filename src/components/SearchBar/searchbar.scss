@@ -1,0 +1,136 @@
+@use 'src/styles/vars';
+
+.search-container {
+  background-color: vars.$verylight-blue;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+
+  .tabs-list {
+    display: flex;
+    justify-content: space-around;
+    max-width: 70vw;
+    margin: auto;
+
+    .tab {
+      margin: 5px;
+      padding: 7px;
+      border-radius: 15px;
+      background-color: rgb(112, 178, 223);
+      background: linear-gradient(to bottom, vars.$light-blue 5%, vars.$blue 100%);
+      background-color: #79bbff;
+      border-radius: 28px;
+      border: 1px solid #84bbf3;
+      font-family: vars.$secondary-font;
+      font-size: 16px;
+      padding: 5px 15px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #aac5e0;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    .react-tabs__tab--selected {
+      font-weight: bolder;
+    }
+
+    .tab:active {
+      border: 1px solid vars.$yellow;
+      background: linear-gradient(to bottom, vars.$yellow 5%, vars.$orange 100%);
+      ;
+    }
+
+  }
+
+  .search-field {
+    padding: 15px;
+    margin-top: 25px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .search-input {
+    border-radius: 15px;
+    font-size: 18px;
+    color: #555;
+    padding: 5px 5px 5px 10px;
+    width: 100%;
+    border-right: none;
+    outline: none;
+    margin-right: 3px;
+    border: 1px solid vars.$light-blue;
+  }
+
+  ::placeholder {
+    font-family: vars.$tertiary-font;
+  }
+
+}
+
+.search-button {
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px 15px;
+  height: 35px;
+  border: 1px solid vars.$yellow;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, vars.$light-blue, vars.$blue);
+  box-shadow: vars.$orange 7px 6px 8px 0px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+  background-color: #ffe299;
+  border-radius: 28px;
+  border: 1px solid #ffc685;
+  display: inline-block;
+  font-family: vars.$secondary-font;
+  font-size: 16px;
+  text-shadow: 0px 1px 0px vars.$yellow;
+  margin: auto;
+}
+
+.button-filters {
+  text-align: center; 
+}
+
+.filters-button {
+  background: linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+  background-color: #ffe299;
+  border-radius: 28px;
+  border: 1px solid #ffc685;
+  display: inline-block;
+  font-family: vars.$secondary-font;
+  font-size: 16px;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px vars.$yellow;
+  display: flex;
+  margin: auto;
+}
+
+@media only screen and (min-width: 426px) {
+  .search-container { 
+    width: 80%;   
+    margin: auto;
+    
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .search-container {
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .search-input {
+    width: 90%;
+    margin: auto;
+  }
+}

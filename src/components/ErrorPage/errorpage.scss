@@ -1,0 +1,56 @@
+@use 'src/styles/vars';
+
+.errorpage-container{
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: vars.$verylight-blue;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 20px auto;
+  font-family: vars.$secondary-font;
+  font-size: 20px;
+  text-align: center;
+};
+
+.p1{
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.image-container{
+  width: 90%;
+  border-radius: 15px;
+  margin: 10px auto;
+}
+
+.errorpage-button{
+  width: fit-content;
+	background:linear-gradient(to bottom, vars.$light-blue 5%, vars.$blue 100%);
+	background-color:#79bbff;
+	border-radius:28px;
+	border:1px solid #84bbf3;
+	display:inline-block;
+	font-family: vars.$secondary-font;
+	font-size:20px;
+	padding:10px 15px;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #aac5e0;
+  margin-bottom: 15px;
+  margin: auto;
+  margin-top: 5px;
+}
+
+@media only screen and (min-width: 769px) {
+  .errorpage-container {
+    width: 80%;
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+  .errorpage-container {
+    width: 70%;
+  }
+
+}

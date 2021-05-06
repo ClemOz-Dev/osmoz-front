@@ -1,0 +1,103 @@
+@use 'src/styles/vars';
+
+.card {
+  background-color: beige;
+  border-radius: 15px;
+  margin: 30px;
+  padding: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-family: vars.$secondary-font;
+
+  .card-category {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+
+  .type {
+    background-color: vars.$blue;
+    padding: 7px;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .thumbnail-holder {
+    object-fit: contains;
+
+    .image {
+      border-radius: 15px;
+    }
+  }
+
+  .genre-container {
+    padding: 10px 0;
+
+    .type,
+    .genre {
+      border-radius: 10px;
+      padding: 0px 3px;
+
+    }
+
+    .genre {
+      background-color: vars.$yellow;
+      margin: 5px;
+    }
+  }
+
+  .item-status {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+  }
+
+  .owner {
+    font-weight: 700;
+  }
+
+  .owner:hover {
+    text-decoration: underline;
+  }
+
+  .object-name {
+    font-weight: 600;
+    font-size: x-large;
+    margin: 4px;
+  }
+
+  .creator {
+    font-weight: 400;
+    margin: 2px 0;
+    font-size: small;
+    font-style: italic;
+  }
+
+}
+
+.status--reserve {
+  content: url('../../assets/images/reserved.svg');
+};
+
+.status--dispo {
+  content: url('../../assets/images/ok.svg');
+}
+
+.status--indispo {
+  content: url('../../assets/images/notok.svg');
+}
+
+@media only screen and (min-width: 900px) {
+  .card {
+    max-width: 300px;
+  }
+}

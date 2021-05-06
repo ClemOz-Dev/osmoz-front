@@ -1,0 +1,67 @@
+@use 'src/styles/vars';
+
+.home {
+  width: 90vw;
+  margin: auto;
+  text-align: start;
+  overflow-y: auto;
+  margin-bottom: 50px;
+
+  .book,
+  .movie,
+  .music {
+    float: left;
+    display: flex;
+    overflow-x: auto;
+    margin-left: -1rem;
+    z-index: 1;
+  }
+
+  .welcome-container {
+    margin: 30px 0;
+
+    .welcome,
+    .sentence {
+      font-family: vars.$primary-font;
+      font-size: 18px;
+    }
+  }
+
+  .label {
+    margin-top: 0.5rem;
+    position: sticky;
+    background-color: vars.$verylight-blue;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-family: vars.$secondary-font;
+    width: fit-content;
+    background:linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+    background-color:#ffe299;
+    border-radius:28px;
+    border:1px solid #ffc685;
+    display:inline-block;
+    text-decoration:none;
+    text-shadow:0px 1px 0px vars.$yellow;
+    margin: auto;
+  }
+
+  .list {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    height: 490px;
+    margin-bottom: 1rem;   
+  }
+ 
+  .nickname{
+    font-weight: 800;
+  }
+
+}
+
+@media only screen and (min-width: 900px) {
+  .list {
+    overflow-x: auto;
+  }
+}

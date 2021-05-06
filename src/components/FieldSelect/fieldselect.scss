@@ -1,0 +1,33 @@
+@use 'src/styles/vars';
+.field {
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto; 
+  
+  .input-select {
+    border-radius: 15px;
+    font-size: 14px;
+    color: #555;
+    padding: 5px 5px 5px 10px;
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    background-color: #fff;
+    border: 1px solid vars.$light-blue;
+    background-color: #fff;
+  }
+
+  .label {
+    margin: 25px 0 5px 0px;
+    text-align: left;
+    font-size: 22px;
+  }
+
+  #textarea {
+    padding: 10px;
+    line-height: 1.5;     
+    white-space: pre-wrap;    
+  }
+}

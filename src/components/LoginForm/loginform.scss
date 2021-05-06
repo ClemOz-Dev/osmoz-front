@@ -1,0 +1,97 @@
+@use 'src/styles/vars';
+
+.title {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-family: vars.$primary-font;
+  background-color: vars.$verylight-blue;
+  margin-bottom: 1rem;
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 700;
+  background: linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+  background-color: #ffe299;
+  border: 1px solid #ffc685;
+  text-shadow: 0px 1px 0px vars.$yellow;
+}
+
+.loginForm {
+  height: 60vh;
+  background-color: vars.$verylight-blue;
+  padding: 16px;
+  border-radius: 15px;
+  font-family: vars.$tertiary-font;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ // overflow: hidden;
+
+  .field {
+    max-width: 300px;
+    margin: 0 auto;
+
+    .label {
+      margin-top: 0;
+    }
+
+    input {
+      border-radius: 15px;
+      font-size: 18px;
+      color: #555;
+      padding: 5px 5px 5px 10px;
+      width: 100%;
+      outline: none;
+      box-shadow: none;
+      border: 1px solid vars.$light-blue;
+    }
+
+  }
+
+  .validation-content {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .resetLink {
+      font-style: italic;
+      font-size: smaller;
+      margin: auto;
+    }
+
+    .button {
+      width: 150px;
+      height: 40px;
+      background: linear-gradient(to bottom, #FFE299 5%, #FFC685 100%);
+      background-color: #ffe299;
+      border-radius: 15px;
+      border: 1px solid #FFC685;
+      display: inline-block;
+      font-family: vars.$secondary-font;
+      font-size: 16px;
+      padding: 5px 15px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px vars.$yellow;
+      margin: 30px auto;
+
+      &:hover {
+        background: vars.$orange;
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 900px) {
+  .login-container {
+    width: 45%;
+    margin: auto;
+
+    .loginForm::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

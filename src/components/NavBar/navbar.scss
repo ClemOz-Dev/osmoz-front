@@ -1,0 +1,135 @@
+@use 'src/styles/vars';
+
+.navbar {
+  backdrop-filter: blur(2.5px);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 15px 15px 0 0;
+  bottom: 0;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 90vw;
+  z-index: 1;
+}
+
+.icon {
+  margin: 1%;
+  padding: 1rem;
+}
+
+.icon:hover {
+  border-radius: 25px;
+  background: #ffffff;
+  box-shadow: inset 20px 20px 60px #d9d9d9,
+              inset -20px -20px 60px #ffffff;
+}
+
+.far,
+.fas {
+  color: rgb(84, 99, 170);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background: linear-gradient(0deg, rgba(255,226,153,1) 21%, rgba(255,198,133,1) 91%);
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 200%;
+  left: 50%;
+  margin-left: -60px;
+  font-family: vars.$secondary-font;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+
+.tooltip .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent vars.$orange transparent;
+}
+
+.logo-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sign_out {
+  display: none;
+}
+
+@media only screen and (min-width: 900px) {
+  .desktop-navbar {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 15px;
+    max-width: 90vw;
+    border-radius: 0 0 15px 15px;
+    backdrop-filter: blur(6px);
+    background-color: rgba(255, 255, 255, 0.45);
+    border: 0px rgba(255, 255, 255, 0.4) solid;
+  }
+
+  .navbar {
+    backdrop-filter: blur(6px);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 0px rgba(214, 153, 73, 0.4) solid;
+    border-radius: 15px;
+    flex-direction: row;
+    bottom: unset;
+    position: relative;
+    box-shadow: none;
+    max-width: 50%;
+    justify-content: space-evenly;
+    width: unset;
+    padding: .5%;
+  }
+
+  .logo {
+    margin-right: 5rem;
+  }
+
+  .icon {
+    margin: 10px;
+    padding: 1rem 1rem;
+    background: linear-gradient(145deg, #FFFFFF, #CFD1D4);
+    border-radius: 15%;
+  }
+
+  .other {
+    display: none;
+  }
+
+  .sign_out {
+    display: initial;
+    margin-right: 10px;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .tooltip-text {
+    display: none;
+  }
+}

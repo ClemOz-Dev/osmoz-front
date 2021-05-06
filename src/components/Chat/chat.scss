@@ -1,0 +1,168 @@
+@use 'src/styles/vars';
+
+.chat-container {
+  margin-top: 20px;
+}
+
+.chat {
+  padding: 2em;
+  width: 90vw;
+  height: 60vh;
+  overflow-y: auto;
+  border-radius: 15px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: vars.$verylight-blue;
+
+
+  .message {
+    margin-bottom: 2rem;
+    text-align: center;
+
+    .message-author {
+      margin: auto;
+      font-weight: bold;
+      color: black;
+      background-color: vars.$blue;
+      border-radius: 15px;
+      padding: 3px 10px;
+      font-family: vars.$secondary-font;
+      width: max-content;
+      margin-right: 85%;
+      display: inline-block;
+    }
+
+    &.message--own .message-author--own {
+      margin-left: 75%;
+      border-radius: 15px;
+      background-color: vars.$blue;
+      padding-right: 1.2rem;
+    }
+
+    .message-content {
+      padding: 1.2rem 1.3rem;
+      margin-top: 0.8rem;
+      color: black;
+      background-color: vars.$orange;
+      border-radius: 1.6rem;
+      position: relative;
+      font-family: vars.$tertiary-font;
+
+    }
+
+    .message--own {
+      background-color: vars.$yellow;
+    }
+
+    &.message--own {
+      .message-content {
+        &:before {
+          right: 2em;
+          border-left: none;
+          border-right: 25px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+.closeChat {
+  background: linear-gradient(to bottom, vars.$light-blue 5%, vars.$blue 100%);
+  background-color: #79bbff;
+  border-radius: 28px;
+  border: 1px solid #84bbf3;
+  display: inline-block;
+  font-family: vars.$secondary-font;
+  font-size: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #aac5e0;
+  margin-bottom: 15px;
+
+}
+
+@media only screen and (min-width: 426px) {
+  .chat-container {
+    width: 90%;
+    margin: 30px auto 5px auto;
+
+
+  }
+
+  .chat {
+    width: 100%;
+    overflow-x: hidden;
+
+    .message {
+      .message-author {
+        margin-right: 85%;
+      }
+
+      &.message--own .message-author--own {
+        margin-left: 86%;
+        font-size: large;
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 769px) {
+  .chat-container {
+    width: 65%;
+    margin: 30px auto 5px auto;
+
+
+  }
+
+  .chat {
+    width: 100%;
+    overflow-x: hidden;
+
+    .message {
+      .message-author {
+        margin-right: 85%;
+      }
+
+      &.message--own .message-author--own {
+        margin-left: 86%;
+        font-size: large;
+      }
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 1025px) {
+  .chat-container {
+    width: 60%;
+    margin: 30px auto 5px auto;
+
+
+  }
+
+  .chat {
+    width: 100%;
+    overflow-x: hidden;
+
+    .message {
+      .message-author {
+        margin-right: 100%;
+      }
+
+      &.message--own .message-author--own {
+        margin-left: 90%;
+        font-size: large;
+        padding-right: 10px;
+        padding-top: 7px;
+      }
+    }
+  }
+
+
+}

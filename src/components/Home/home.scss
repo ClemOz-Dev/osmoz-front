@@ -1,0 +1,63 @@
+@use 'src/styles/vars';
+
+.home {
+  width: 90vw;
+  margin: auto;
+  text-align: start;
+  overflow-y: auto;
+
+  .book,
+  .movie,
+  .music {
+    float: left;
+    display: flex;
+    overflow-x: auto;
+    margin-left: -1rem;
+    z-index: 1;
+  }
+
+  .label {
+    margin-top: 0.5rem;
+    position: sticky;
+    background-color: vars.$verylight-blue;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 22px;
+    font-family: vars.$secondary-font;
+    width: fit-content;
+  }
+
+  button.rec-dot {
+    background-color: transparent;
+    box-shadow: 0 0 1px 3px rgba(255, 226, 153, 0.6);
+  }
+
+  button.rec-dot:hover,
+  button.rec-dot:active,
+  button.rec-dot:focus {
+    background-color: vars.$yellow;
+    box-shadow: 0 0 1px 3px rgba(255, 226, 153, 1);
+  }
+
+  .rec-arrow {
+    padding: -1px;
+    background-color: transparent;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  /* round buttons on hover */
+  .rec.rec-arrow:hover {
+    background-color: vars.$orange;
+  }
+
+  .rec.rec-arrow:focus,
+  .rec.rec-arrow:active {
+    background-color: vars.$yellow
+  }
+
+  /* hide disabled buttons */
+  .rec.rec-arrow:disabled {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,30 @@
+.field {
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;   
+
+  .input {
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #999;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+
+
+  .label {
+    margin: 25px 0 5px 0px;
+    text-align: left;
+    font-size: 22px;
+
+  }
+
+  #textarea {
+    padding: 10px;
+    line-height: 1.5;     
+    white-space: pre-wrap;    
+  }
+
+}

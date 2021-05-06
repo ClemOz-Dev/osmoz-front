@@ -1,0 +1,122 @@
+@use 'src/styles/vars';
+
+.title {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-family: vars.$primary-font;
+  background-color: vars.$verylight-blue;
+  margin-bottom: 1rem;
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+
+.contactForm {
+  height: 60vh;
+  background-color: vars.$verylight-blue;
+  font-family: vars.$secondary-font;
+  border-radius: 15px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+
+  .field {
+    max-width: 300px;
+    margin: 0 auto;
+
+    .label {
+      margin-top: 0;
+    }
+
+    input {
+      border-radius: 15px;
+      font-size: 18px;
+      color: #555;
+      padding: 5px 5px 5px 10px;
+      width: 100%;
+      outline: none;
+      box-shadow: none;
+      border: 1px solid vars.$light-blue;
+      margin-bottom: 20px;
+    }
+  }
+
+  .contact-submit {
+    background: linear-gradient(to bottom, #ffe299 5%, #ffc685 100%);
+    background-color: #ffe299;
+    border: 1px solid #ffc685;
+    text-shadow: 0px 1px 0px vars.$yellow;
+  }
+
+
+}
+
+@media only screen and (min-width: 426px) {
+  .contactform-container {
+    max-width: 80%;
+    margin: 25px auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .contactform-container {
+    max-width: 70%;
+    margin: 25px auto;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .contactform-container {
+    max-width: 50%;
+    margin: 25px auto;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+
+  .div-contactform {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 80vh;
+    background-color: rgba($color: #000000, $alpha: .4);
+    border-radius: 15px;
+    background: rgba(12, 10, 10, 0.30);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.0px);
+    -webkit-backdrop-filter: blur(6.0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    .contactform-container {
+      margin: auto;
+
+      .form-container {
+        margin: auto;
+      }
+    }
+
+  }
+
+  .contactform-container {
+    max-width: 65%;
+  }
+}
+
+@media only screen and (min-width: 1130px) {
+  .div-contactform {
+    width: 50%;
+}
+.contactform-container {
+  max-width: 65%;
+}
+}

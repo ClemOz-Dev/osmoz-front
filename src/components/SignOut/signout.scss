@@ -1,0 +1,118 @@
+@use 'src/styles/vars';
+
+.title {
+  margin-top: 30px;
+  font-size: 1.5rem;
+  font-family: vars.$primary-font;
+  background-color: vars.$verylight-blue;
+  margin-bottom: 1rem;
+  max-width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: 700;
+}
+
+.confirmation {
+  height: 60vh;
+  overflow: scroll;
+  background-color: vars.$verylight-blue;
+  padding: 16px;
+  border-radius: 15px;
+  font-family: vars.$tertiary-font;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .text {
+    padding: 10px;
+  }
+
+  .check-mark {
+    font-size: 40px;
+    color: vars.$orange;
+    animation: bounce 2s ease 0s 1 normal forwards;
+    margin-bottom: 50px;
+  }
+
+  .link {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 24px;
+    border: 1px solid vars.$blue, ;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, vars.$light-blue, vars.$blue);
+    box-shadow: vars.$blue 7px 6px 10px 0px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 50px;
+    background: linear-gradient(to bottom, vars.$light-blue 5%, vars.$blue 100%);
+    background-color: #79bbff;
+    border-radius: 28px;
+    border: 1px solid #84bbf3;
+    display: inline-block;
+    font-family: vars.$secondary-font;
+    font-size: 18px;
+    text-shadow: 0px 1px 0px #aac5e0;
+    color: black;
+
+    &:hover {
+      background: vars.$blue;
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .signout{
+    width: 45%;
+    margin: auto;
+  }
+}
